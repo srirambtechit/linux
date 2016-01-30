@@ -1,0 +1,2 @@
+SCRIPT_PATH=/opt/
+TMP_PATH=/tmp
