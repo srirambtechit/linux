@@ -53,3 +53,8 @@ expression1  -a  expression2	Logical AND
 expression1  -o  expression2	Logical OR
 
 </pre>
+
+<h3>Looping statements</h3>
+ - For loop
+ - While loop
+ 
