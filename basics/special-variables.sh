@@ -5,7 +5,8 @@
 
 # Following variables are special purpose variables
 echo "Script file name      : " $0 		# returns current running script file name
-echo "Running process ID    : " $$		# returns currenly running script's process id
+echo "Running process ID    : " $$		# returns currently running script's process id
+echo "String of Cmd args    : " $*		# returns full command line arguments as a string
 
 echo 									# for new line
 
@@ -20,4 +21,4 @@ echo "Seventh argument : " $7  		# 7th input parameter
 echo "Eighth argument  : " $8  		# 8th input parameter
 echo "Ninth argument   : " $9  		# 9th input parameter
 echo "Number of arg    : " $#  		# Number of input parameter
-echo "Full param str   : " $@		# Returns full argument as a single string
+echo "Full param string: " $@		# Returns full argument as a single string

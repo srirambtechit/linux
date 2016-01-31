@@ -2,5 +2,5 @@
 
 . ./variable.sh
 
-echo path is $TMP_PATH
-echo $$
+echo Temporary path is $TMP_PATH
+echo Script path is $SCRIPT_PATH
