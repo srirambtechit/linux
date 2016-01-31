@@ -21,26 +21,3 @@ do
 done
 
 echo
-
-# for loop in nested
-echo "nested for loop"
-for((m=0;m<5;m++))
-do
-	for((n=0;n<5;n++))
-	do
-		echo -n "($m, $n) "
-	done
-	echo
-done
-
-echo
-
-# while loop
-echo "while loop"
-n=3
-while [ $n -gt 0 ]
-do
-	echo "Value is $n"
-	n=`expr $n - 1`
-done
-

@@ -5,7 +5,7 @@ Different types of shells:-
   - C shell
   - kron shell
 
-Conditional statements:-
+<h3>Conditional statements</h3>
 <pre>
 Syntax:
 
@@ -46,7 +46,7 @@ Operator	Meaning
 -r file   	Is read-only file
 -x file   	Is file is executable
 
-
+<h4>Logical testing</h4>
 Operator						Meaning
 ! expression					Logical NOT
 expression1  -a  expression2	Logical AND
