@@ -10,9 +10,9 @@ echo "4 - division (/)"
 echo
 echo "Enter option: "
 read option
-echo "Enter number 1: "
+echo "Enter first number: "
 read num1
-echo "Enter number 2: "
+echo "Enter second number: "
 read num2
 echo
 case $option in

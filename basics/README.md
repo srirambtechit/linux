@@ -5,6 +5,16 @@ Different types of shells:-
   - C shell
   - kron shell
 
+<h3>Command line arguments</h3>
+$# - Returns no of input arguments to script
+$@ - Returns full argument as string
+$* - Returns full argument as string
+$? - Returns last executed command's exit status
+$0 - Returns currently executing scripts name
+$1 - Returns 1st argument
+$2, $3,... $9 - Returns 2nd, 3rd,...till 9th arguments respectively
+${10}, ${11}, ${arg_position} - to access arguments beyond the 9
+
 <h3>Conditional statements</h3>
 <pre>
 Syntax:
@@ -58,3 +68,55 @@ expression1  -o  expression2	Logical OR
  - For loop
  - While loop
  
+<h3>Advance concepts</h3>
+<pre>
+/dev/null - This is special Linux file which is used to send any unwanted output from program/command.
+Ex: $ ls > /dev/null # it won't display output in console
+</pre>
+
+<h3>Variable scope</h3>
+<pre>
+As in other programming, shell scripting also has two important scope to define variable
+- Local variable - visible within the shell
+- Global variable - visible to other shell
+Ex: 
+name=Sriram # name is local variable
+echo $name 
+export name # exporting local variable as global
+# Now I am moving to next shell
+/bin/sh
+echo $name # returns the name
+</pre>
+
+<h3>IO Redirection and Piping</h3>
+<pre>
+> - It redirect output to some other standard output streams like file, disk, network
+Ex: 
+$ ls -ltrh > list.txt
+
+>> - does same as >, but append at end of the file
+Ex: 
+$ ls -h >> list.txt
+
+< - Redirect input stream to command 
+Ex: 
+$ sort < names.txt
+
+2> - represents standard error output stream
+Ex:
+$ rm asdf 				# returns No such file or directory error 
+$ rm asdf 2> /dev/null   # suppress the error
+
+
+StdIn - 0
+StdOut - 1
+StdErr - 2
+To redirect from one IO to another below syntax
+from>&destination
+Ex: echo "Error occurred" 1>&2 # it redirect stdout to stderr
+
+</pre>
+
+
+<h3>Conditional execution i.e. && and ||</h3>
+&& and || operator has short circuit behavior
