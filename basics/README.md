@@ -120,3 +120,18 @@ Ex: echo "Error occurred" 1>&2 # it redirect stdout to stderr
 
 <h3>Conditional execution i.e. && and ||</h3>
 && and || operator has short circuit behavior
+
+<h3>Trap command</h3>
+<pre>
+To capture interrupt signal via script for special cases 
+like resource cleanup, invoking other script, to do post processing
+ 
+<b>Signal Number      When occurs</b>
+0                     shell exit 
+1                     hangup
+2                     interrupt (CTRL+C)
+3                     quit 
+9                     kill (cannot be caught)
+
+
+</pre>
