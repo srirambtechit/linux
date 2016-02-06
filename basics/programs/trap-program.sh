@@ -53,7 +53,7 @@ done
 # Uncomment/Comment below line to see the difference
 #
 #
-# trap del_file 2
+trap del_file 2
 
 # invoking function
 get_input

@@ -6,6 +6,7 @@ Different types of shells:-
   - kron shell
 
 <h3>Command line arguments</h3>
+<pre>
 $# - Returns no of input arguments to script
 $@ - Returns full argument as string
 $* - Returns full argument as string
@@ -14,6 +15,7 @@ $0 - Returns currently executing scripts name
 $1 - Returns 1st argument
 $2, $3,... $9 - Returns 2nd, 3rd,...till 9th arguments respectively
 ${10}, ${11}, ${arg_position} - to access arguments beyond the 9
+</pre>
 
 <h3>Conditional statements</h3>
 <pre>
