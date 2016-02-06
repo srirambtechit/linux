@@ -187,8 +187,8 @@ cut -f{field number} {file-name}
 Use of Cut utility:
 Selecting portion of a file.
 
-<i>See program:</i> essential-utils/cut_util.sh
-Example: ./cut_util.sh sname.txt smark.txt
+<i>See program:</i> <b>essential-utils/cut_util.sh</b>
+Example: <code>./cut_util.sh sname.txt smark.txt</code>
 </pre>
 
 
@@ -200,8 +200,8 @@ paste {file1} {file2}
 Use of paste utility:
 Putting lines together.
 
-<i>See program:</i> essential-utils/paste_util.sh
-Example: ./paste_util.sh sname.txt smark.txt
+<i>See program:</i> <b>essential-utils/paste_util.sh</b>
+Example: <code>./paste_util.sh sname.txt smark.txt</code>
 </pre>
 
 <pre>
@@ -215,8 +215,8 @@ The join utility joins, lines from separate files.
 
 <b>Note:</b> that join will only work, if there is common field in both file and if values are identical to each other.
 
-<i>See program:</i> essential-utils/join_util.sh
-Example: ./join_util.sh sname.txt smark.txt
+<i>See program:</i> <b>essential-utils/join_util.sh</b>
+Example: <code>./join_util.sh sname.txt smark.txt</code>
 </pre>
 
 
