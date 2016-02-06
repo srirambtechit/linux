@@ -138,6 +138,37 @@ like resource cleanup, invoking other script, to do post processing
 3                     quit 
 9                     kill (cannot be caught)
 
-<i>See example:</i> <b>programs/trap-program.sh</b>
+<i>See example:</i> <b>advanced-concepts/trap-program.sh</b>
+</pre>
 
+<h3>Shilft command</h3>
+<pre>
+The shift command moves the current values stored in the positional
+ parameters (command line args) to the left one position.
+
+<i>See example:</i> <b>advanced-concepts/shift_demo.sh</b>
+<i>See example:</i> <b>advanced-concepts/ns_converter.sh</b>
+</pre>
+
+<h3>getopts command</h3>
+<pre>
+This command is used to check valid command line argument are passed to script. Usually used in while loop.
+Syntax:
+getopts {optsring} {variable1}
+
+getopts is used by shell to parse command line argument.
+As defined in man pages:
+"optstring contains the option letters to be recognized; if a letter is followed by a colon, the option is expected to have an argument, which should be separated from it by white space. Each time it is invoked, getopts places the next option in the shell variable variable1, When an option requires an argument, getopts places that argument into the variable OPTARG. On errors getopts diagnostic messages are printed when illegal options or missing option arguments are encountered. If an illegal option is seen, getopts places ? into variable1."
+
+Examlpe:
+We have script called ani which has syntax as
+ani -n -a -s -w -d
+Options: These are optional argument
+    -n name of animal
+    -a age of animal
+    -s sex of animal
+    -w weight of animal
+    -d demo values (if any of the above options are used their values are not taken)
+
+<i>See example:</i> <b>advanced-concepts/ani.sh</b>    
 </pre>
