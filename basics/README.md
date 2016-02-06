@@ -117,11 +117,14 @@ To redirect from one IO to another below syntax
 from>&destination
 Ex: echo "Error occurred" 1>&2 # it redirect stdout to stderr
 
+<i>See example:</i> <b>advanced-concepts/redirect-output.sh</b>
+<i>See example:</i> <b>advanced-concepts/supress-error.sh</b>
 </pre>
 
 
 <h3>Conditional execution i.e. && and ||</h3>
 && and || operator has short circuit behavior
+<i>See example:</i> <b>advanced-concepts/cond-cmd-execution.sh</b>
 
 <h3>Trap command</h3>
 <pre>
@@ -135,5 +138,6 @@ like resource cleanup, invoking other script, to do post processing
 3                     quit 
 9                     kill (cannot be caught)
 
+<i>See example:</i> <b>programs/trap-program.sh</b>
 
 </pre>
