@@ -117,14 +117,14 @@ To redirect from one IO to another below syntax
 from>&destination
 Ex: echo "Error occurred" 1>&2 # it redirect stdout to stderr
 
-<i>See example:</i> <b>advanced-concepts/redirect-output.sh</b>
-<i>See example:</i> <b>advanced-concepts/supress-error.sh</b>
+<i>See program:</i> <b>advanced-concepts/redirect-output.sh</b>
+<i>See program:</i> <b>advanced-concepts/supress-error.sh</b>
 </pre>
 
 
 <h3>Conditional execution i.e. && and ||</h3>
 && and || operator has short circuit behavior
-<i>See example:</i> <b>advanced-concepts/cond-cmd-execution.sh</b>
+<i>See program:</i> <b>advanced-concepts/cond-cmd-execution.sh</b>
 
 <h3>Trap command</h3>
 <pre>
@@ -138,7 +138,7 @@ like resource cleanup, invoking other script, to do post processing
 3                     quit 
 9                     kill (cannot be caught)
 
-<i>See example:</i> <b>advanced-concepts/trap-program.sh</b>
+<i>See program:</i> <b>advanced-concepts/trap-program.sh</b>
 </pre>
 
 <h3>Shilft command</h3>
@@ -146,8 +146,8 @@ like resource cleanup, invoking other script, to do post processing
 The shift command moves the current values stored in the positional
  parameters (command line args) to the left one position.
 
-<i>See example:</i> <b>advanced-concepts/shift_demo.sh</b>
-<i>See example:</i> <b>advanced-concepts/ns_converter.sh</b>
+<i>See program:</i> <b>advanced-concepts/shift_demo.sh</b>
+<i>See program:</i> <b>advanced-concepts/ns_converter.sh</b>
 </pre>
 
 <h3>getopts command</h3>
@@ -158,7 +158,12 @@ getopts {optsring} {variable1}
 
 getopts is used by shell to parse command line argument.
 As defined in man pages:
-"optstring contains the option letters to be recognized; if a letter is followed by a colon, the option is expected to have an argument, which should be separated from it by white space. Each time it is invoked, getopts places the next option in the shell variable variable1, When an option requires an argument, getopts places that argument into the variable OPTARG. On errors getopts diagnostic messages are printed when illegal options or missing option arguments are encountered. If an illegal option is seen, getopts places ? into variable1."
+"optstring contains the option letters to be recognized; if a letter is followed by a colon, 
+the option is expected to have an argument, which should be separated from it by white space. 
+Each time it is invoked, getopts places the next option in the shell variable variable1, 
+When an option requires an argument, getopts places that argument into the variable OPTARG. 
+On errors getopts diagnostic messages are printed when illegal options or missing option 
+arguments are encountered. If an illegal option is seen, getopts places ? into variable1."
 
 Examlpe:
 We have script called ani which has syntax as
@@ -170,5 +175,109 @@ Options: These are optional argument
     -w weight of animal
     -d demo values (if any of the above options are used their values are not taken)
 
-<i>See example:</i> <b>advanced-concepts/ani.sh</b>    
+<i>See program:</i> <b>advanced-concepts/ani.sh</b>    
 </pre>
+
+<h3>Essential Utils - Data manipulation</h3>
+<pre>
+<b>cut command:</b> Useful for extracting data from structured file
+Syntax:
+cut -f{field number} {file-name}
+
+Use of Cut utility:
+Selecting portion of a file.
+
+<i>See program:</i> essential-utils/cut_util.sh
+Example: ./cut_util.sh sname.txt smark.txt
+</pre>
+
+
+<pre>
+<b>paste command:</b> Paste utility join textual information together
+Syntax:
+paste {file1} {file2}
+
+Use of paste utility:
+Putting lines together.
+
+<i>See program:</i> essential-utils/paste_util.sh
+Example: ./paste_util.sh sname.txt smark.txt
+</pre>
+
+<pre>
+<b>join command:</b> To join to files based on two common field in both files.
+
+Syntax:
+join {file1} {file2}
+
+Use of join utility:
+The join utility joins, lines from separate files.
+
+<b>Note:</b> that join will only work, if there is common field in both file and if values are identical to each other.
+
+<i>See program:</i> essential-utils/join_util.sh
+Example: ./join_util.sh sname.txt smark.txt
+</pre>
+
+
+<pre>
+<b>Type case command:</b> Translating character case from upper to lower or vice versa.
+Syntax:
+tr {pattern-1} {pattern-2}
+
+Use of tr utility:
+To translate range of characters into other range of characters.
+
+<code>$ tr "a" "e" < sname.txt</code> Replace all occurrence of 'a' in sname.txt as 'e'
+<code>$ tr "[a-z]" "[A-Z]" < sname.txt</code> Change all character to Upper case
+</pre>
+
+
+<pre>
+<b>awk command:</b> scan record from file line by line and perform the action if search pattern matches
+
+Syntax:
+awk 'pattern action' {file-name}
+
+Example: 
+1. <code>$ awk '/good/ { print $3 }' inventory.txt</code>
+2. <code>$ awk '/good/ { print $1 " " $3 }' inventory.txt</code>
+</pre>
+
+<pre>
+<b>sed command:</b>Use of sed utility: sed is used to edit (text transformation) on given stream i.e a file or may be 
+input from a pipeline. sed utility is used to find every occurrence of given word and replace it with another word. 
+sed - "Steam line editor" which uses 'ex' editors command for editing text files without starting ex.
+
+Syntax:
+sed {expression} {file}
+
+Example: <code>sed '/tea/s//milk/g' teaormilk</code>
+</pre>
+
+<pre>
+<b>uniq command:</b> remove subsequent duplication from file or input stream 
+
+Syntax:
+uniq {file-name}
+
+Example: 
+1. <code>uniq dup.txt</code> removes adjacent duplicate data but still duplicate data exists which are not adjacent.
+2. <code>sort dup.txt | uniq</code> removes all duplicate data
+</pre>
+
+<pre>
+<b>grep command:</b> search given text pattern in file or input stream
+
+Syntax:
+grep {pattern} {file-name}
+
+Example:
+<code> grep "too" content.txt</code>
+</pre>
+
+
+
+
+
+
