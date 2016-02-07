@@ -279,7 +279,7 @@ Example:
 <h3>Ex Editor for data processing</h3>
 <pre>
 It is important file editor for manipulating with textual information in file.
-<i>See details</i> ex-editor/
+<i>See details</i> <b>ex-editor/README.md</b>
 </pre>
 
 
