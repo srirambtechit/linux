@@ -94,8 +94,8 @@ Example:
 <b>/regex/<b> - regular expression or given pattern to find out in file
 
 Example:
-<b>:/hello/ p</b> - find only first occurrence of "hello" in the file 
-<b>:g/hello/ p</b> - find all occurrence of "hello" in the file (g - globally)
+<b>:/hello/ p</b> <code>- find only first occurrence of "hello" in the file</code> 
+<b>:g/hello/ p</b> <code>- find all occurrence of "hello" in the file (g - globally)</code>
 </pre>
 
 <pre>
