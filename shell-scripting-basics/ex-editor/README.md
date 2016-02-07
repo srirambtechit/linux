@@ -61,17 +61,27 @@ Example:
 <b>:1 d</b> - deletes line # 1 in that file
 <b>:1,4 d</b> - deletes in the given range from line # 1 to 4
 <b>:/text1/ d</b> - deletes a line which has text1
+<b>:g /^$/ d</b> - delete all empty lines in file
 </pre>
 
 
 <pre>
-<b>Copy data</b>
+<b>Copy, Paste data</b>
 
 <b>co</b> is used for copying a portion of file and paste in the same file
 
 Example:
 <b>:1,3 co 4</b> - copy content from line # 1 to 3 and paste it next to line # 4
 <b>:1,3 co $</b> - copy content from line # 1 to 3 and paste it end of file
+</pre>
+
+<pre>
+<b>Undo data</b>
+
+<b>u</b> is used for undoing changes in file
+
+Example:
+<b>:u</b> - undo last action
 </pre>
 
 
@@ -96,7 +106,49 @@ Example:
 Example:
 <b>:/hello/ p</b> - find only first occurrence of "hello" in the file 
 <b>:g/hello/ p</b> - find all occurrence of "hello" in the file (g - globally)
+
+<b>:g /the/</b> - finds all matching words like "the", "these", "they" since /the/ is pattern
+<b>:g /\<the\></b> - find only the matched word i.e "the";
+                      Note: search word enclosed by \<word\>
+
+<b>:g /^Linux/</b> - line begins with Linux
+<b>:g /Linux $/</b> - line ends with Linux
+<b>:g /^$/</b> - empty lines in file
+<b>:g /[^\^$]/</b> - view file without empty lines
+<b>:g /[Ll]inux/</b> - matches Linux and linux in file 
 </pre>
+
+<pre>
+<b>Find and replace</b>
+
+<b>:s/target-word/new-word/</b> - replaces target-word by new given word
+s - is called as substitute
+
+<b>contextual address:</b> generally referred by search pattern
+
+Example:
+<b>:8 s/linux/unix/</b> - do replace on line # 8
+<b>:1,$ s/linux/unix/</b> - do replace on all line
+<b>:g /linux/ s/linux/unix/</b> - do replace only matched line with first occurrence of word in a line (based on "linux")
+<b>:g /linux/ s/the/that/g</b> - do replace only matched line for all occurrence of word in a line (based on "linux")
+
+Confirmation based replacement
+<b>:g /linux/ s/linux/unix/gc</b> - ask confirmation when performing replace. 
+                                    give confirmation by providing y,n,a (y -yes, n- no, a-replace all)
+</pre>
+
+
+<pre>
+<b>Convert case</b>
+
+<b>:\l</b> - convert to lower case
+<b>:\u</b> - convert to upper case
+
+Example:
+<b>1,4 s/[a-z]/\u&/g</b> - convert first four line to upper case
+<b>1,4 s/[A-Z]/\l&/g</b> - convert first four line to lower case
+</pre>
+
 
 <pre>
 <b></b>
