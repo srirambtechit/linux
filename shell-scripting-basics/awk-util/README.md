@@ -38,3 +38,33 @@ Metacharacter       Meaning
    |             Separate choices to match
     
 </pre>
+
+
+<h3>awk basic usage</h3>
+<pre>
+Method 1:-
+$ awk { awk program } data-file
+
+<b>Example:</b> 
+$ awk { print $1 " " $2 } inven.txt
+
+Method 2:-
+$ awk -f awk-pgm-file data-file
+Example:
+$vi awk-pgm-file
+/Pen/ { print $1 " " $2 } #filters line contains "Pen" word
+
+$ awk -f awk-pgm-file inven.txt
+
+See: 
+ 1. <b>awk -f num_item inven.txt</b>
+ 2. <b>awk -f num_item inven.txt | grep "pgm 1"</b>
+ 3. <b>awk -f num_item inven.txt | grep "pgm 2"</b>
+ 4. <b>awk -f num_item inven.txt | grep "pgm 3"</b>
+</pre>
+
+
+
+
+
+
