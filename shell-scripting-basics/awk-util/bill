@@ -1,0 +1,19 @@
+BEGIN {
+ print "--------------------------"
+ print " Bill for month of Apr'16 "
+ print "--------------------------"
+}
+
+{
+	total = $3 * $4
+	recno = $1
+	item = $2
+	gtotal = gtotal + total
+	print recno "." item " Rs." total
+}
+
+END {
+ print "--------------------------"
+ print " Total Rs." gtotal
+ print "--------------------------"
+}
