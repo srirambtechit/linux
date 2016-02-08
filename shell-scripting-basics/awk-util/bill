@@ -9,11 +9,11 @@ BEGIN {
 	recno = $1
 	item = $2
 	gtotal = gtotal + total
-	print recno "." item " Rs." total
+	printf "%2d. %-10s Rs.%4d\n", recno, item, total
 }
 
 END {
  print "--------------------------"
- print " Total Rs." gtotal
+ printf "%4s%-10s Rs.%4d\n", "", "Total", gtotal
  print "--------------------------"
 }

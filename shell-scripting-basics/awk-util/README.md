@@ -78,7 +78,7 @@ FS                  Field separator character (Blank & tab is default)
 $0 - returns whole line as string
 $1, $2, $3, ... - represents fields in the line
 
-See Program: <b>awk -f def_var inven.txt</b>
+see program: <b>awk -f def_var inven.txt</b>
 </pre>
 
 <h3>arithmetic in awk</h3>
@@ -94,18 +94,37 @@ see program: <b> awk -f math</b> and give two params as input
  - BEGIN, END block execute only once
  - BEGIN runs before reading input from stream
  - END runs after reading input from stream 
- 
- BEGIN {
-  ...
- }
- 
- {...}
- 
- END {
-  ...
- }
- 
+ - structure of program:-
+		 BEGIN {
+		  ...
+		 }
+		 
+		 {...}
+		 
+		 END {
+		  ...
+		 }
+		 
+see program: <b>awk -f bill inven.txt</b>		 
 </pre>
+
+
+<h3>formatted output</h3>
+<pre>
+ - To format output, use printf 
+ %d - number data
+ %c - character data Ex: gender = "M" (note double quotes used)
+ %x - hex value
+ %s - string data
+ 
+ format spec:-
+ |%5d| - 5 character space allocated also right justified
+ |%-5d| - left justified (minus used)
+
+see program: <b>awk -f format</b> (then hit enter)
+</pre>
+
+
 
 
 
