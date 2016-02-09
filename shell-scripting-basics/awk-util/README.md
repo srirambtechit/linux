@@ -58,10 +58,10 @@ $vi awk-pgm-file
 $ awk -f awk-pgm-file inven.txt
 
 See: 
- 1. <b>awk -f awk_num_item inven.txt</b>
- 2. <b>awk -f awk_num_item inven.txt | grep "pgm 1"</b>
- 3. <b>awk -f awk_num_item inven.txt | grep "pgm 2"</b>
- 4. <b>awk -f awk_num_item inven.txt | grep "pgm 3"</b>
+ 1. <b>awk -f num_item.awk inven.txt</b>
+ 2. <b>awk -f num_item.awk inven.txt | grep "pgm 1"</b>
+ 3. <b>awk -f num_item.awk inven.txt | grep "pgm 2"</b>
+ 4. <b>awk -f num_item.awk inven.txt | grep "pgm 3"</b>
 </pre>
 
 <h3>Predefined variable</h3>
@@ -79,14 +79,14 @@ FS                  Field separator character (Blank & tab is default)
 $0 - returns whole line as string
 $1, $2, $3, ... - represents fields in the line
 
-see program: <b>awk -f awk_def_var inven.txt</b>
+see program: <b>awk -f def_var.awk inven.txt</b>
 </pre>
 
 <h3>arithmetic in awk</h3>
 <pre>
 Normal arithmetic operators used such as +, -, *, /, mod
 
-see program: <b> awk -f awk_math</b> and give two params as input
+see program: <b> awk -f math.awk</b> and give two params as input
 </pre>
 
 <h3>awk program structure</h3>
@@ -106,7 +106,7 @@ see program: <b> awk -f awk_math</b> and give two params as input
 		  ...
 		 }
 		 
-see program: <b>awk -f awk_bill inven.txt</b>		 
+see program: <b>awk -f bill.awk inven.txt</b>		 
 </pre>
 
 
@@ -122,7 +122,7 @@ see program: <b>awk -f awk_bill inven.txt</b>
  |%5d| - 5 character space allocated also right justified
  |%-5d| - left justified (minus used)
 
-see program: <b>awk -f awk_format</b> (then hit enter)
+see program: <b>awk -f format.awk</b> (then hit enter)
 </pre>
 
 
@@ -130,7 +130,7 @@ see program: <b>awk -f awk_format</b> (then hit enter)
 <pre>
  - if-else block for decision making
 
-see program: <b>awk -f awk_cond_block</b> (hit enter and pass three params like 10 + 3)
+see program: <b>awk -f cond_block.awk</b> (hit enter and pass three params like 10 + 3)
 </pre>
 
 <h3>looping statement</h3>
@@ -140,11 +140,26 @@ see program: <b>awk -f awk_cond_block</b> (hit enter and pass three params like 
  	- while loop
  - to perform repeated task
 
-see program: <b>awk -f awk_for_loop</b>
-see program: <b>awk -f awk_while_loop</b>
+see program: <b>awk -f for_loop.awk</b>
+see program: <b>awk -f while_loop.awk</b>
 </pre>
 
+<h3>Sample programs</h3>
+<pre>
+1. Copy files from one place to another from the given input file
+see program: <b>awk -f filecopy.awk filelist.conf</b>
 
+2.As I write visual installation guide, I use to capture lot of images for my work, 
+  while capturing images I saved all images (i.e. file names) in UPPER CASE
+  for e.g. RH7x01.JPG,RH7x02.JPG,...RH7x138.JPG. Now I would like to rename all 
+  files to lowercase
+see program: <b>./fname2upper.sh /home/sriram/demo<dir_path></b>
+
+3.Getting input from user in awk programming (getline na < "-")
+see program: 
+1. <b>awk -f readinput.awk</b>
+2. <b>awk -f readfile.awk</b>
+</pre>
 
 
 
