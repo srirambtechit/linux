@@ -5,6 +5,7 @@
  - scripting language
  - powerful data processing tool
  - has it own programming style
+ - C style programming
 
 Syntax:
 	awk -f { awk-program-file } data-file
@@ -57,10 +58,10 @@ $vi awk-pgm-file
 $ awk -f awk-pgm-file inven.txt
 
 See: 
- 1. <b>awk -f num_item inven.txt</b>
- 2. <b>awk -f num_item inven.txt | grep "pgm 1"</b>
- 3. <b>awk -f num_item inven.txt | grep "pgm 2"</b>
- 4. <b>awk -f num_item inven.txt | grep "pgm 3"</b>
+ 1. <b>awk -f awk_num_item inven.txt</b>
+ 2. <b>awk -f awk_num_item inven.txt | grep "pgm 1"</b>
+ 3. <b>awk -f awk_num_item inven.txt | grep "pgm 2"</b>
+ 4. <b>awk -f awk_num_item inven.txt | grep "pgm 3"</b>
 </pre>
 
 <h3>Predefined variable</h3>
@@ -78,14 +79,14 @@ FS                  Field separator character (Blank & tab is default)
 $0 - returns whole line as string
 $1, $2, $3, ... - represents fields in the line
 
-see program: <b>awk -f def_var inven.txt</b>
+see program: <b>awk -f awk_def_var inven.txt</b>
 </pre>
 
 <h3>arithmetic in awk</h3>
 <pre>
 Normal arithmetic operators used such as +, -, *, /, mod
 
-see program: <b> awk -f math</b> and give two params as input
+see program: <b> awk -f awk_math</b> and give two params as input
 </pre>
 
 <h3>awk program structure</h3>
@@ -105,7 +106,7 @@ see program: <b> awk -f math</b> and give two params as input
 		  ...
 		 }
 		 
-see program: <b>awk -f bill inven.txt</b>		 
+see program: <b>awk -f awk_bill inven.txt</b>		 
 </pre>
 
 
@@ -121,8 +122,29 @@ see program: <b>awk -f bill inven.txt</b>
  |%5d| - 5 character space allocated also right justified
  |%-5d| - left justified (minus used)
 
-see program: <b>awk -f format</b> (then hit enter)
+see program: <b>awk -f awk_format</b> (then hit enter)
 </pre>
+
+
+<h3>conditional statement</h3>
+<pre>
+ - if-else block for decision making
+
+see program: <b>awk -f awk_cond_block</b> (hit enter and pass three params like 10 + 3)
+</pre>
+
+<h3>looping statement</h3>
+<pre>
+ - Two types of loop is available
+ 	- for loop
+ 	- while loop
+ - to perform repeated task
+
+see program: <b>awk -f awk_for_loop</b>
+see program: <b>awk -f awk_while_loop</b>
+</pre>
+
+
 
 
 

@@ -1,0 +1,16 @@
+BEGIN {
+	printf "for loop demo\n"
+	printf "Press Ctrl + D to stop\n"
+}
+
+{
+	i = 0
+	while(i<10) {
+		printf "i=%d\n", i
+		i++;
+	}
+}
+
+END {
+	printf "Completed!\n"
+}
