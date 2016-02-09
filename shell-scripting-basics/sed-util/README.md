@@ -39,7 +39,43 @@ Syntax:
    Note: -n suppress default output, print only matched data 
 </pre>
 
-<h3></h3>
+<h3>sed script</h3>
 <pre>
-
+ - sed command grouped into a file called sed script file
+ 
+ - for inserting text at given line number
+ Syntax:
+ 	[lineaddress]i\
+ 	text
+ Ex:
+ 	<b>2i\
+ 	This is new line</b>
+ 	
+ - for appending text based on matching
+ Syntax:
+ 	/word/ a\
+ 	text
+ Ex:
+ 	<b>/Rubber/ a\
+ 	out of stock</b>
+ 	
+ - for changing text at line
+ Syntax:
+ 	[linenumber] c\
+ 	text
+ Ex 1:
+ 	<b>3c\
+ 	3. Eraser  3   3.50</b>
+ Ex 2:
+ 	<b>/Rubber/ c\
+ 	3. Eraser  3   3.50</b>
+ 	
+ - to use this sed file in shell script
+   see program: <b>$ sed -f chg.sed inventory.txt</b> 	
 </pre>
+
+
+
+
+
+
