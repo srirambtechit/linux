@@ -1,6 +1,5 @@
 BEGIN {
 	printf "for loop demo\n"
-	printf "Press Ctrl + D to stop\n"
 }
 
 {
@@ -9,6 +8,7 @@ BEGIN {
 		printf "i=%d\n", i
 		i++;
 	}
+	printf "Press Ctrl + D to stop\n"
 }
 
 END {
