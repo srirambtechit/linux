@@ -1,5 +1,7 @@
 <h1>Unix & Linux Shell Scripting</h1>
 
+Reference: <b>http://www.freeos.com/guides/lsst/index.html</b>
+
 Different types of shells:-
   - Bourne shell
   - C shell
@@ -281,9 +283,3 @@ Example:
 It is important file editor for manipulating with textual information in file.
 <i>See details</i> <b>ex-editor/README.md</b>
 </pre>
-
-
-
-
-
-
