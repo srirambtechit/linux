@@ -1,0 +1,6 @@
+This  file has multiple   spaces
+
+Need to remove  blank lines
+
+Checking   done
+Please ensure you   keep the file  at position.

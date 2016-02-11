@@ -74,6 +74,38 @@ Syntax:
    see program: <b>$ sed -f chg.sed inventory.txt</b> 	
 </pre>
 
+<h3>sed example</h3>
+<pre>
+1. Matching given number of occurrence.
+   Here 0 should occur minimum two times or more
+   see program: <b>$ sed -n "/10\{2\}1/p" demofile.txt</b>
+   
+2. Matching given range of occurrence.
+   Here 0 should occur minimum 2 times maximum 3 times
+   see program: <b>$ sed -n "/10\{2, 3\}1/p" demofile.txt</b>
+   
+3. Match given character number of times
+   asterisk symbol appears 3 times
+   see program: <b>$ sed -n "/^\*..$/p" demofile.txt</b>
+   				<b>$ sed -n "/^\*\{2,3\}$/p" demofile.txt</b>
+   				
+4. Remove more than one spaces in the input file
+   see program: <b>$ sed -f space.sed demofile2.txt</b>
+   
+5. Create a new file from given input file with following constraints
+	a) No blank line
+	b) Replace all Linux by Linux-Unix
+	c) The above a & b should be done between the *** lines
+   see program: <b>$ sed -f constraint.sed demofile.txt > /tmp/newfile_$$.txt</b>
+
+6. We have frineds database. Our task is as follows for friends database file:
+    1)Find all occurrence of "A'bad" word replace it with "Aurangabad" word
+    2)Exapand MH state value to Maharastra
+    3)Find all blank line and replace with actual line (i.e. ========)
+    4)Instert e-mail address of each persons at the end of persons postal 
+      address. For each person e-mail ID is different
+   see program: <b>$ sed -f ufriend.sed frineds.db > updated_frinds_$$.db </b>    
+</pre>
 
 
 
